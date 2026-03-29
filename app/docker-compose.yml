@@ -6,3 +6,10 @@ services:
       - CURRENT_ENVIRONMENT=dev
     ports:
       - "8081:5000"
+
+  front:
+    image: tiagosilva000/lab-docker-front:latest
+    environment:
+      - WS_BACK_URL=http://host.docker.internal:8081
+    ports:
+      - "8082:80"
