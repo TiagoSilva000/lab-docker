@@ -1,0 +1,8 @@
+version: '3'
+services:
+  back:
+    image: tiagosilva000/lab-docker-back:latest
+    environment:
+      - CURRENT_ENVIRONMENT=dev
+    ports:
+      - "8081:5000"
