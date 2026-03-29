@@ -10,6 +10,6 @@ services:
   front:
     image: tiagosilva000/lab-docker-front:latest
     environment:
-      - WS_BACK_URL=http://host.docker.internal:8081
+      - WS_BACK_URL=http://back:5000
     ports:
       - "8082:80"
