@@ -5,6 +5,8 @@ services:
       - CURRENT_ENVIRONMENT=dev
     ports:
       - "8081:5000"
+    # volumes:
+    #   - ./logs:/app/logs
 
   front:
     image: tiagosilva000/lab-docker-front:latest
