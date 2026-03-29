@@ -1,0 +1,3 @@
+docker rm -f lab-docker-back lab-docker-front
+docker run -d --name lab-docker-back -e CURRENT_ENVIRONMENT=dev -p 8081:5000 tiagosilva000/lab-docker-back:latest
+docker run -d --name lab-docker-front -e WS_BACK_URL=http://host.docker.internal:8081 -p 8082:80 tiagosilva000/lab-docker-front:latest
